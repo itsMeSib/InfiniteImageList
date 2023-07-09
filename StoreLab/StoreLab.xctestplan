@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "3A7867C4-27A2-44F9-A40A-51B35D24CD54",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:StoreLab.xcodeproj",
+        "identifier" : "CB6C60F62A5709CC00C0A6F2",
+        "name" : "StoreLabTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:StoreLab.xcodeproj",
+        "identifier" : "CB6C61002A5709CC00C0A6F2",
+        "name" : "StoreLabUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
