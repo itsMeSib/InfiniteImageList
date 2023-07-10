@@ -19,9 +19,11 @@ struct ImageListView: View {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible())], spacing: 10) {
                     ForEach(viewModel.images) { image in
+                        // Navigate to Image Detail Page
                         NavigationLink(destination: ImageDetailPage(viewModel: ImageDetailViewModel(image: image))) {
                             ImageCell(viewModel: viewModel.getImageCellViewModel(image: image))
                                 .onAppear {
+                                    // Fetch next page if needed
                                     Task {
                                         if viewModel.shouldFetchNextPage(image) {
                                             await fetchData()

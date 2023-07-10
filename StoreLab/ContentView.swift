@@ -15,12 +15,14 @@ struct ContentView: View {
 
     var body: some View {
         TabView(selection: $selection) {
+            // Tab 1: Image List View
             ImageListView(viewModel: ImageListViewModel())
                 .tabItem {
                     Label("List", systemImage: "list.bullet")
                 }
                 .tag(Tab.featured)
             
+            // Tab 2: Favorite Image List View
             FavoriteImageList(viewModel: FavouriteImageListViewModel())
                 .tabItem {
                     Label("Favourite", systemImage: "star")
