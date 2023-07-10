@@ -15,6 +15,7 @@ struct ImageListView: View {
     @State private var errorMessage = ""
     
     var body: some View {
+        NavigationView {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible())], spacing: 10) {
                     ForEach(viewModel.images) { image in
@@ -39,6 +40,8 @@ struct ImageListView: View {
             .alert(isPresented: $showErrorAlert) {
                 Alert(title: Text("Error"), message: Text(errorMessage), dismissButton: .default(Text("OK")))
             }
+            .navigationTitle("Image List")
+        }
     }
     
     private func fetchData() async {

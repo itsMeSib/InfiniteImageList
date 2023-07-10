@@ -14,21 +14,18 @@ struct ContentView: View {
     }
 
     var body: some View {
-        NavigationView {
-            TabView(selection: $selection) {
-                ImageListView(viewModel: ImageListViewModel())
-                    .tabItem {
-                        Label("List", systemImage: "list.bullet")
-                    }
-                    .tag(Tab.featured)
-                
-                FavoriteImageList(viewModel: FavouriteImageListViewModel())
-                    .tabItem {
-                        Label("Favourite", systemImage: "star")
-                    }
-                    .tag(Tab.list)
-            }
-            .navigationBarTitle("Infinite Image List")
+        TabView(selection: $selection) {
+            ImageListView(viewModel: ImageListViewModel())
+                .tabItem {
+                    Label("List", systemImage: "list.bullet")
+                }
+                .tag(Tab.featured)
+            
+            FavoriteImageList(viewModel: FavouriteImageListViewModel())
+                .tabItem {
+                    Label("Favourite", systemImage: "star")
+                }
+                .tag(Tab.list)
         }
     }
 }

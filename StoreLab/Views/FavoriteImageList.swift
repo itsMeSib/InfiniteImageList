@@ -11,6 +11,7 @@ struct FavoriteImageList: View {
     @StateObject var viewModel: FavouriteImageListViewModel
     
     var body: some View {
+        NavigationView {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible())], spacing: 10) {
                     ForEach(viewModel.images) { image in
@@ -26,5 +27,6 @@ struct FavoriteImageList: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .navigationTitle("Favorite Image List")
+        }
     }
 }
