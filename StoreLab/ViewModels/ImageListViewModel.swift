@@ -21,6 +21,7 @@ class ImageListViewModel: ObservableObject {
         self.likedImageManager = likedImageManager
     }
     
+    // Handle Network Call here
     func fetchData() async  throws {
         guard !isFetchingData else { return }
         
@@ -52,11 +53,13 @@ class ImageListViewModel: ObservableObject {
         }
     }
     
+    // Fetch Next Page Content
     func shouldFetchNextPage(_ image: ImageModel) -> Bool {
         guard let lastImage = images.last else { return false }
         return image.id == lastImage.id
     }
     
+    // Here Get ViewModel for Image cell
     func getImageCellViewModel(image: ImageModel) -> ImageCellViewModel {
         return ImageCellViewModel(image: image)
     }
