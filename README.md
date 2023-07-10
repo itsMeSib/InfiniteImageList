@@ -4,6 +4,7 @@ Infinite Picture Scroll List in SwiftUI
 <h1>Infinite Picture Scroll List in SwiftUI</h1><p>This is an Infinite Scroll List implemented in SwiftUI with a feature to add items to favorites.</p>
 
 
+![ezgif-5-429df43673](https://github.com/itsMeSib/InfiniteImageList/assets/99397904/2c10ed38-ad45-440c-99a2-ec07157e60b5)
 
 
 100% business logic in Unit test. 
